@@ -137,13 +137,13 @@ jobs:
 
       - name: Make download
         run: |
-          make download -j8 || make download -j1 V=s
+          make download -j16 V=s
           rm -rf $(find ./dl/ -size -1024c)
           df -h
 
       - name: Compile firmware
         run: |
-          make -j$(nproc) || make -j1 V=s
+          make -j16 V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
