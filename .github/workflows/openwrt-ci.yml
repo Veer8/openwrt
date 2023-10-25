@@ -127,11 +127,11 @@ jobs:
 
 
       - name: Download packages
-        run: make download -j16
+        run: make download -j20
 
       - name: Compile firmware
         run: |
-          make -j$(nproc) || make -j1 V=s
+          make -j20 V=s
           echo "======================="
           echo "Space usage:"
           echo "======================="
