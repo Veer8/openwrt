@@ -7,9 +7,9 @@
 #
 name: OpenWrt-CI
 
-on:
-  schedule:
-    - cron: 0 22 * * *
+on: workflow_dispatch
+#  schedule:
+#    - cron: 0 22 * * *
 
 permissions:
   contents: read
