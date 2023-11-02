@@ -7,9 +7,15 @@
 #
 name: OpenWrt-CI-x86_x64
 
-on: workflow_dispatch
-#  schedule:
-#    - cron: 0 20 * * *
+on: 
+  repository_dispatch:
+  workflow_dispatch:
+  push:
+    branches: 
+      - openwrt-23.05
+    
+  # schedule:
+  #   - cron: 0 20 * * *
 
 permissions:
   contents: read
